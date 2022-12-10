@@ -17,4 +17,10 @@ function getRandomHole(holes){
     lastHole = hole;
     return hole;
 }
+
+function popUpMoles(){
+    const popUpTime = getRandomTime(200, 1000);
+    const popUpHole = getRandomHole(holes);
+    popUpHole.classList.add("up");
+}
   
