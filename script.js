@@ -22,5 +22,9 @@ function popUpMoles(){
     const popUpTime = getRandomTime(200, 1000);
     const popUpHole = getRandomHole(holes);
     popUpHole.classList.add("up");
+    
+    setTimeout(() => {
+        popUpHole.classList.remove("up");
+    }, popUpTime)
 }
   
