@@ -2,6 +2,7 @@ const holes = document.querySelectorAll(".hole");
 const scoreBoard = document.querySelector(".score");
 const moles = document.querySelectorAll(".mole");
 let lastHole;
+let timeUp = false;
 
 function getRandomTime(min, max){
     return Math.round(Math.random() * (max - min) + min);
@@ -25,6 +26,7 @@ function popUpMoles(){
     
     setTimeout(() => {
         popUpHole.classList.remove("up");
+        if(!timeUp) popUpMoles();
     }, popUpTime)
 }
   
