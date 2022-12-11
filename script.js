@@ -29,4 +29,11 @@ function popUpMoles(){
         if(!timeUp) popUpMoles();
     }, popUpTime)
 }
+
+function startGame(){
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    popUpMoles();
+    setTimeout(() => timeUp = true, 10000);
+}
   
